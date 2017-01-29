@@ -18,7 +18,7 @@
  * MA 02110-1301, USA.
  */
 
-#include "money.h"
+#include "roman_cal.h"
 #include<stdio.h>
 
 /* only main should be in this file, to make all other functions in
