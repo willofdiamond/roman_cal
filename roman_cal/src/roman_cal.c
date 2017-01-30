@@ -18,11 +18,69 @@
  * MA 02110-1301, USA.
  */
 
+//maximum possible roman number is mmmDcccLxxxviii which has 15 charecters and its decimal value  
+//is 3888<2Bytes.
+
 #include <stdlib.h>
+#include <string.h>
 #include "roman_cal.h"
 
+int has_all_core_roman_char(char *str){
+
+/*
+This function intended to find if the string has core roman elements:
+I, V, X, L, C, D, and M
+if any other charecter appeat then this function will return 0;
+if the entire string is made of basic roman charecters then this function will return 1.
+*/
+char *i;
+int out=1;
+for(i=str;*i;i++){
+    if(!return_decimal(*i)){
+     out=0; 
+     break;
+      }
+     
+
+}
+return out;
+}
 
 
+int return_decimal(char char1){
+    int out1=0;
+    switch(char1){
+    case 'I': out1=1; break;
+    case 'V': out1=5; break;
+    case 'X': out1=10;break;
+    case 'L': out1=50; break;
+    case 'C': out1=100; break;
+    case 'D': out1=500; break;
+    case 'M': out1=1000; break;
+    }
+return out1;
+}
+
+
+int is_roman_number(char * str){
+
+
+
+}
+
+int roman_to_decimal(char * str){
+
+}
+
+char* decimal_to_roman(int number){
+
+}
+
+
+
+char convert_locase_to_UPCASE(char* str){
+
+}
 
 
 int main(void)

@@ -36,50 +36,40 @@ void teardown(void)
     
 }
 
-START_TEST(test_all_roman)
+START_TEST(test_roman_cal_create)
 {
-    ck_assert_int_eq(has_all_core_roman_char("XXIL"),1);
-    ck_assert_int_eq(has_all_core_roman_char("Z"),0);
-    /*ck_assert_int_eq(roman_to_decimal("XI"),11);
-    cK_assert_str_eq(decimal_to_roman(93),"XCI");
-    ck_assert_int_eq(is_roman_number("III"), 1);
-    ck_assert_int_eq(is_roman_number("IIX",0);
-    */
     
-    
+    ck_assert_str_eq(is_roman_number("iii
+", "USD");
 }
 END_TEST
 
-
-
-Suite * roman_check_suite(void)
-{ Suite *s;
-    TCase *tc_core;
+START_TEST(test_roman_cal_create_neg)
+{
     
-   //creating a test suite
-    s = suite_create("Romancalculator");
+    ck_assert_msg(m == NULL,
+                  "NULL should be returned on attempt to create with "
+                  "a negative amount");
+}
+END_TEST
 
-    /* all roman test case */
-    tc_core = tcase_create("test_all_roman");
-    tcase_add_checked_fixture(tc_core, setup, teardown);
-    tcase_add_test(tc_core, test_all_roman);
-    suite_add_tcase(s, tc_core);
-
+START_TEST()
+{
    
+
+}
+END_TEST
+
+Suite * roman_cal_suite(void)
+{
+    
+    
+
     return s;
 }
 
 int main(void)
 {
-int number_failed;
-    Suite *s;
-    SRunner *sr;
 
-    s = roman_check_suite();
-    sr = srunner_create(s);
-
-    srunner_run_all(sr, CK_NORMAL);
-    number_failed = srunner_ntests_failed(sr);
-    srunner_free(sr);
-    return (number_failed == 0) ? EXIT_SUCCESS : EXIT_FAILURE;
+    return 1;
 }

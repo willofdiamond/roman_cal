@@ -23,7 +23,12 @@
 
 #ifndef ROMAN_H
 #define ROMAN_H
+int has_all_core_roman_char(char *str);
+int return_decimal(char char1);
 
-
+int is_roman_number(char * str);
+int roman_to_decimal(char * str);
+char* decimal_to_roman(int number);
+char convert_locase_to_UPCASE(char* str);
 #endif /* ROMAN_H */
 
