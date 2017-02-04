@@ -26,9 +26,18 @@
    whole program testing framework like Autotest.
 */
 
-int main(void)
-{
-printf("hello setup works"); 
-
-    return 0;
+int main() {
+	/*test  IXI,0  XXXIX XL iiiiv  iivi  mmcdiii  mmcidiii,0 lixvx ix MMMDCCCLXXXviii  MMMCMXCIX MMMMCMXCIX*/
+	char str2[]="MMMCMXCVIII" ;
+	int len=strlen(str2),num;
+	printf("Enter the decimal value: ");
+	scanf("%d",&num);
+   //printf("neg int is %d \n",-10);
+    //printf("size of iii is : %ld\n",strlen(str2));
+    printf("value of roman is %d\n",if_roman_number_return_decimal(str2,len));
+    char *szSomeString = if_decimal_return_roman(num); 
+    printf("%s", szSomeString);
+    free(szSomeString);
+   return 0;
 }
+

@@ -704,6 +704,8 @@ uninstall-am: uninstall-binPROGRAMS uninstall-libLTLIBRARIES
 .PRECIOUS: Makefile
 
 
+#https://www.gnu.org/software/automake/manual/automake.html#amhello_0027s-Makefile_002eam-Setup-Explained
+
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:

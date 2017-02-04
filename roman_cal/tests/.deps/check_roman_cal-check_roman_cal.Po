@@ -4,7 +4,7 @@ check_roman_cal-check_roman_cal.o: check_roman_cal.c \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include/stddef.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
@@ -23,7 +23,7 @@ check_roman_cal-check_roman_cal.o: check_roman_cal.c \
  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include/stdint.h /usr/include/stdint.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h /usr/include/check.h \
  /usr/include/string.h /usr/include/xlocale.h \
  /usr/include/x86_64-linux-gnu/bits/string.h \
@@ -47,7 +47,7 @@ check_roman_cal-check_roman_cal.o: check_roman_cal.c \
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/5/include/stddef.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
@@ -91,7 +91,7 @@ check_roman_cal-check_roman_cal.o: check_roman_cal.c \
 
 /usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/5/include/stdint.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdint.h:
 
 /usr/include/stdint.h:
 

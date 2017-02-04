@@ -1,34 +1,23 @@
 /*
- * Check: a unit test framework for C
- * Copyright (C) 2001, 2002 Arien Malec
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
- * MA 02110-1301, USA.
+ * Header file for Roman Number calculator
  */
 
 
 
 
-#ifndef ROMAN_H
+#ifndef ROMAN_H// wrapper to protect from multiple header calls
 #define ROMAN_H
-int has_all_core_roman_char(char *str);
-int return_decimal(char char1);
+//gobal variables
+int roman_number;
 
-int is_roman_number(char * str);
-int roman_to_decimal(char * str);
-char* decimal_to_roman(int number);
-char convert_locase_to_UPCASE(char* str);
+//functions
+const char* return_roman(int number);
+int return_decimal(char char1);
+int if_roman_number_return_decimal(char * str, int len);
+int has_all_core_roman_char(char *str);
+//int find_maximum_array(int array[], int len_n);
+char* if_decimal_return_roman(int dec_number);
+
+;
 #endif /* ROMAN_H */
 

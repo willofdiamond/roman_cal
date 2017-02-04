@@ -36,34 +36,74 @@ void teardown(void)
     
 }
 
-START_TEST(test_all_roman)
-{
+START_TEST(has_all_core_roman)
+
+{  
+   //char strr[]="iiifc";
+  
+
+    //ck_assert_str_eq(if_decimal_return_roman(10),"X");
+   // ck_assert_str_ne(if_decimal_return_roman(10),"X");
     ck_assert_int_eq(has_all_core_roman_char("XXIL"),1);
     ck_assert_int_eq(has_all_core_roman_char("Z"),0);
-    /*ck_assert_int_eq(roman_to_decimal("XI"),11);
-    cK_assert_str_eq(decimal_to_roman(93),"XCI");
-    ck_assert_int_eq(is_roman_number("III"), 1);
-    ck_assert_int_eq(is_roman_number("IIX",0);
-    */
+    //ck_assert_int_eq(roman_to_decimal("XI"),11);
+    //cK_assert_str_eq(decimal_to_roman(93),"XCI");
+    //ck_assert_int_eq(if_roman_number_return_decimal("III",3), 3);
+   // ck_assert_int_eq(if_roman_number_return_decimal("IIX",3),0);
+    
+    
+    
+}
+END_TEST
+START_TEST(if_roman_return_decimal)
+
+{  
+  
+    ck_assert_int_eq(if_roman_number_return_decimal("III",3), 3);
+    ck_assert_int_eq(if_roman_number_return_decimal("IIX",3),0);
+    
+    
+    
+}
+END_TEST
+START_TEST(decimal_return_roman)
+
+{  
+   
+  
+
+    ck_assert_str_eq(if_decimal_return_roman(10),"X");
+    ck_assert_str_ne(if_decimal_return_roman(100),"X");
+    
+    
     
     
 }
 END_TEST
 
 
-
 Suite * roman_check_suite(void)
 { Suite *s;
-    TCase *tc_core;
+    TCase *tc_core,*tc_if_roman_return_decimal,*tc_decimal_return_roman;
     
    //creating a test suite
     s = suite_create("Romancalculator");
 
     /* all roman test case */
-    tc_core = tcase_create("test_all_roman");
+    tc_core = tcase_create("has_all_core_roman");
     tcase_add_checked_fixture(tc_core, setup, teardown);
-    tcase_add_test(tc_core, test_all_roman);
+    tcase_add_test(tc_core, has_all_core_roman);
     suite_add_tcase(s, tc_core);
+
+    tc_if_roman_return_decimal = tcase_create("if_roman_return_decimal");
+    tcase_add_test(tc_if_roman_return_decimal, if_roman_return_decimal);
+    suite_add_tcase(s, tc_if_roman_return_decimal);
+
+    tc_decimal_return_roman = tcase_create("has_all_core_roman");
+    tcase_add_test(tc_decimal_return_roman, decimal_return_roman);  
+    suite_add_tcase(s, tc_decimal_return_roman);
+    
+    
 
    
     return s;

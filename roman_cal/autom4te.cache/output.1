@@ -3291,7 +3291,7 @@ unknown)
   as_fn_error $? "could not determine $AR interface" "$LINENO" 5
   ;;
 esac
-
+   #need to use the supoort of archiver
 
 # unique source file --- primitive safety check 
 
@@ -12749,7 +12749,7 @@ CC=$lt_save_CC
 
 # Only expand once:
 
-
+  #Automake will turn on processing for libtoo
 
 # Checks for libraries.
 
@@ -12963,8 +12963,7 @@ else
         { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 $as_echo "yes" >&6; }
 	
-fi
-
+fi #checking for availablility of check package
 
 # Checks for header files.
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ANSI C header files" >&5
@@ -15453,3 +15452,8 @@ if test -n "$ac_unrecognized_opts" && test "$enable_option_checking" != no; then
 $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
 fi
 
+
+#Reference
+#https://www.gnu.org/software/automake/manual/html_node/Public-Macros.html
+#https://www.gnu.org/software/autoconf/manual/autoconf-2.61/html_node/Setup.html#Setup
+#https://www.gnu.org/software/libtool/manual/html_node/LT_005fINIT.html#LT_005fINIT
