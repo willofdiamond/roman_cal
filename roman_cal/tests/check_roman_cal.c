@@ -38,7 +38,7 @@ void teardown(void)
 
 START_TEST(has_all_core_roman)
 
-{  
+{  //Test to check if function detecting roman numbers
   ck_assert_int_eq(has_all_core_roman_char("XXIL"),1);
   ck_assert_int_eq(has_all_core_roman_char("Z"),0);
   ck_assert_int_eq(has_all_core_roman_char("IIIVVVI"),1);
@@ -47,7 +47,7 @@ START_TEST(has_all_core_roman)
 END_TEST
 START_TEST(if_roman_return_decimal)
 
-{  
+{  //Test to check if function returing excat decimal numbers
   ck_assert_int_eq(if_roman_number_return_decimal("MMMCMXCIX",9), 3999);
   ck_assert_int_eq(if_roman_number_return_decimal("MMMMMCMXCIX",11), 0); 
   ck_assert_int_eq(if_roman_number_return_decimal("III",3), 3);
@@ -60,7 +60,7 @@ START_TEST(if_roman_return_decimal)
 END_TEST
 START_TEST(decimal_return_roman)
 
-{  
+{  //Test to check if function returing excat roman numbers
   ck_assert_str_eq(if_decimal_return_roman(10),"X");
   ck_assert_str_ne(if_decimal_return_roman(100),"X");
   ck_assert_str_eq(if_decimal_return_roman(789),"DCCLXXXIX");   
