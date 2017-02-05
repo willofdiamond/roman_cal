@@ -46,3 +46,15 @@ Please send bug reports to check-devel AT lists.sourceforge.net.
 src->    consist of all the source files
 
 tests->  consists of all the test files
+
+ COMMANDS TO WORK:
+$ autoreconf --install :To run most of the auto tools( make files, IO files etc)
+$ ./configure          :To generate configure files and make files
+$ make                 :For generating 
+$ make check           :For checking tests on functions 
+
+Running the program:
+go to roman_cal/src/ in command prompt and type ./main to execute the calculator program
+
+
+

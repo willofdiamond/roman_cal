@@ -19,7 +19,8 @@
  */
 
 #include "roman_cal.h"
-#include<stdio.h>
+#include  <stdio.h>
+#include  <string.h>
 
 /* only main should be in this file, to make all other functions in
    the prograble testable by Check.  in order to test main(), use a
@@ -27,17 +28,65 @@
 */
 
 int main() {
-	/*test  IXI,0  XXXIX XL iiiiv  iivi  mmcdiii  mmcidiii,0 lixvx ix MMMDCCCLXXXviii  MMMCMXCIX MMMMCMXCIX*/
-	char str2[]="MMMCMXCVIII" ;
-	int len=strlen(str2),num;
-	printf("Enter the decimal value: ");
-	scanf("%d",&num);
-   //printf("neg int is %d \n",-10);
-    //printf("size of iii is : %ld\n",strlen(str2));
-    printf("value of roman is %d\n",if_roman_number_return_decimal(str2,len));
-    char *szSomeString = if_decimal_return_roman(num); 
-    printf("%s", szSomeString);
-    free(szSomeString);
-   return 0;
+  char str1[20]="",str2[20]="";
+  char *result_roman_string;
+  int result,math,str1_num,str2_num,len1,len2,ch;
+  printf("Welcome to Roman Number Calculator\n");
+  while(1){
+    result=0;
+    math=0;
+    str1_num=0;
+    str2_num=0;
+    len1=0;
+    len2=0;
+    printf("Enter the first roman number EX:III : ");
+    if(scanf("%s",str1)==1);
+    //printf("Entered string is %s\n",str1);
+    printf("\n");
+    len1=strlen(str1);
+   // printf("len1 is %d\n",len1);
+    str1_num=if_roman_number_return_decimal(str1, len1);
+    if(roman_number==0){
+       printf("Entered string is not a vaild roman number\n");
+       continue;
+     }
+    printf("Enter the second roman number EX:IV : ");
+    if(scanf("%s",str2)==1);
+    printf("\n");
+    len2=strlen(str2);
+    //printf("len2 is %d\n",len2);
+    str2_num=if_roman_number_return_decimal(str2, len2);
+    if(roman_number==0){
+       printf("Entered string is not a vaild roman number\n");
+       continue;
+     }
+    printf("Enter the 1 for addition, 2 for subtraction : ");
+    if(scanf("%d",&math)==1);
+    printf("\n");
+  
+    if(roman_number!=0&&math==1){
+       result=str1_num+str2_num;   
+     }
+    else if(roman_number!=0&&math==2){
+       result=str1_num-str2_num;
+    }
+    if(result>0&&result<4000){
+    result_roman_string = if_decimal_return_roman(result); 
+    printf("Result is %s \n", result_roman_string);
+    }else{
+    printf("Result of the entered roman numbers is out of 0 to 3999 range\n");
+    }
+    printf("Enter 1 to exit or any other number to continue: ");
+    scanf("%d",&ch);
+    //printf("\nEntered char is %d",ch);
+    printf("\n");
+    if(ch==1){
+      break;
+    }
+  
+    roman_number=2;
+  }
+
+return 0;
 }
 

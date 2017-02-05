@@ -39,45 +39,31 @@ void teardown(void)
 START_TEST(has_all_core_roman)
 
 {  
-   //char strr[]="iiifc";
-  
-
-    //ck_assert_str_eq(if_decimal_return_roman(10),"X");
-   // ck_assert_str_ne(if_decimal_return_roman(10),"X");
-    ck_assert_int_eq(has_all_core_roman_char("XXIL"),1);
-    ck_assert_int_eq(has_all_core_roman_char("Z"),0);
-    //ck_assert_int_eq(roman_to_decimal("XI"),11);
-    //cK_assert_str_eq(decimal_to_roman(93),"XCI");
-    //ck_assert_int_eq(if_roman_number_return_decimal("III",3), 3);
-   // ck_assert_int_eq(if_roman_number_return_decimal("IIX",3),0);
-    
-    
-    
+  ck_assert_int_eq(has_all_core_roman_char("XXIL"),1);
+  ck_assert_int_eq(has_all_core_roman_char("Z"),0);
+  ck_assert_int_eq(has_all_core_roman_char("IIIVVVI"),1);
+  ck_assert_int_eq(has_all_core_roman_char("CAT"),0);     
 }
 END_TEST
 START_TEST(if_roman_return_decimal)
 
 {  
-  
-    ck_assert_int_eq(if_roman_number_return_decimal("III",3), 3);
-    ck_assert_int_eq(if_roman_number_return_decimal("IIX",3),0);
-    
-    
-    
+  ck_assert_int_eq(if_roman_number_return_decimal("MMMCMXCIX",9), 3999);
+  ck_assert_int_eq(if_roman_number_return_decimal("MMMMMCMXCIX",11), 0); 
+  ck_assert_int_eq(if_roman_number_return_decimal("III",3), 3);
+  ck_assert_int_eq(if_roman_number_return_decimal("IIX",3), 0); 
+  ck_assert_int_eq(if_roman_number_return_decimal("X",1), 10);
+  ck_assert_int_eq(if_roman_number_return_decimal("Ivi",3), 0); 
+
 }
+
 END_TEST
 START_TEST(decimal_return_roman)
 
 {  
-   
-  
-
-    ck_assert_str_eq(if_decimal_return_roman(10),"X");
-    ck_assert_str_ne(if_decimal_return_roman(100),"X");
-    
-    
-    
-    
+  ck_assert_str_eq(if_decimal_return_roman(10),"X");
+  ck_assert_str_ne(if_decimal_return_roman(100),"X");
+  ck_assert_str_eq(if_decimal_return_roman(789),"DCCLXXXIX");   
 }
 END_TEST
 
