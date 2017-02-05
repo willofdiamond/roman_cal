@@ -73,6 +73,7 @@ int main() {
     if(result>0&&result<4000){
     result_roman_string = if_decimal_return_roman(result); 
     printf("Result is %s \n", result_roman_string);
+    free(result_roman_string);
     }else{
     printf("Result of the entered roman numbers is out of 0 to 3999 range\n");
     }

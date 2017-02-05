@@ -1,0 +1,3 @@
+Running suite(s): Romancalculator
+100%: Checks: 3, Failures: 0, Errors: 0
+PASS check_roman_cal (exit status: 0)
